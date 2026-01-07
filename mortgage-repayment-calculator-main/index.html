@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-(--Slate100)">
+    <div class="bg-white mx-auto w-[1000px]">
+      <div class="w-[1000px] h-[550px] flex rounded-md mt-[100px]">
+        <div class="bg-white w-[500px] p-[5%]">
+          <div class="flex gap-[65px] items-center">
+            <p class="text-[22px] text-[var(--Slate900)] font-bold">
+              Mortgage Calculator
+            </p>
+            <p class="underline text-[var(--Slate700)]">Clear All</p>
+          </div>
+          <div class="flex-col mt-[20px]">
+            <p class="text-[var(--Slate700)] font-medium">Mortgage Amount</p>
+            <div
+              class="w-[350px] h-[45px] flex mt-[10px] border border-gray-500 rounded-[5px] items-center gap-[20px]"
+            >
+              <div
+                class="bg-[var(--Slate100)] h-full rounded-bl-[5px] rounded-tl-[5px] w-[50px]"
+              >
+                <p class="text-[var-(--Slate900)] font-bold ml-[38%] mt-[18%]">
+                  £
+                </p>
+              </div>
+              <div>
+                <p class="text-[var(--Slate900)] font-bold">300,000</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-[50px] items-center mt-[20px]">
+            <div class="flex-col">
+              <p class="text-[var(--Slate700)] font-medium">Mortgage Term</p>
+              <div
+                class="w-[150px] h-[45px] flex mt-[10px] border border-gray-500 rounded-[5px] items-center justify-between"
+              >
+                <div class="">
+                  <p class="text-[var(--Slate900)] font-bold ml-[60%]">25</p>
+                </div>
+                <div
+                  class="bg-[var(--Slate100)] h-full rounded-br-[5px] rounded-tr-[5px] w-[70px] ml-[40px]"
+                >
+                  <p
+                    class="text-[var-(--Slate900)] font-bold ml-[20%] mt-[10%]"
+                  >
+                    years
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-col">
+              <p class="text-[var(--Slate700)] font-medium">Interest Rate</p>
+              <div
+                class="w-[150px] h-[45px] flex mt-[10px] border border-gray-500 rounded-[5px] items-center justify-between"
+              >
+                <div class="ml-[15px]">
+                  <p class="text-[var(--Slate900)] font-bold">5.25</p>
+                </div>
+                <div
+                  class="bg-[var(--Slate100)] h-full rounded-br-[5px] rounded-tr-[5px] w-[50px]"
+                >
+                  <p
+                    class="text-[var-(--Slate900)] font-bold ml-[38%] mt-[18%]"
+                  >
+                    %
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-[20px]">
+            <p class="text-[var(--Slate700)]">Mortgage Type</p>
+            <div
+              class="flex bg-[var(--Lime2)] border-1 border-[var(--Lime)] rounded-[5px] h-[50px] w-[350px] items-center gap-[20px] mt-[10px]"
+            >
+              <input
+                type="checkbox"
+                checked
+                readonly
+                class="appearance-none w-3 h-3 rounded-full border-2 border-[var(--Lime)] bg-[var(--Lime)] cursor-pointer ring-2 ring-[var(--Lime)] ring-offset-2 ring-offset-white ml-[6%]"
+              />
+
+              <p class="font-bold text-[var(--Slate900)]">Repayment</p>
+            </div>
+            <div
+              class="flex w-[350px] rounded-[5px] items-center mt-[10px] h-[50px] border-1 border-[var(--Slate700)] gap-[20px]"
+            >
+              <input
+                type="checkbox"
+                class="appearance-none ml-[5%] w-4 h-4 rounded-full border-2 border-gray-400 checked:bg-blue-600 checked:border-blue-600 cursor-pointer transition"
+              />
+              <p class="font-bold text-[var(--Slate900)]">Interest Only</p>
+            </div>
+          </div>
+          <button
+            class="w-[280px] h-[50px] bg-[var(--Lime)] mt-[30px] flex items-center rounded-[30px] gap-[10px]"
+          >
+            <img
+              class="ml-[10%]"
+              src="/mortgage-repayment-calculator-main/assets/images/icon-calculator.svg"
+              alt=""
+            />
+            <p class="font-bold text-[var(--Slate900)]">Calculate Repayments</p>
+          </button>
+        </div>
+        <div class="w-[500px] bg-(--Slate700) rounded-bl-[60px] p-[5%]">
+          <p class="text-white font-bold text-[20px]">Your results</p>
+          <p class="text-white text-[15px] opacity-[0.6] mt-[20px] font-medium">
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click "calculate
+            repayments" again.
+          </p>
+          <div
+            class="w-[400px] h-[250px] bg-[var(--Slate900)] border-t-3 rounded-[5px] border-[var(--Lime)] mt-[30px] p-[7%]"
+          >
+            <p class="text-white opacity-[0.6] text-[14px]">Your monthly repayments</p>
+            <p class="font-bold text-[48px] text-[var(--Lime)]">£1,797.74</p>
+            <hr class="text-gray-500 " />
+            <p class="text-white opacity-[0.6] mt-[20px]">Total youll repay over the term</p>
+            <p class="text-white font-bold text-[22px]">$539,322.94</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
